@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Heart</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #e63946, #ff758f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 35px;
+      font-weight: 600;
+    }
+
+    /* HEART */
+    .heart {
+      width: min(45vw, 180px);
+      margin: auto;
+      animation: beat 1.2s infinite ease-in-out;
+    }
+
+    .heart text {
+      fill: #e63946;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    @keyframes beat {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.12); }
+      100% { transform: scale(1); }
+    }
+
+    .subtitle {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 26px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.25);
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .back:hover,
+    .back:active {
+      background: rgba(255,255,255,0.45);
+    }
+
+    /* Mobile tweak */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <h2>You are the reason my heart beats</h2>
+
+    <!-- SVG HEART -->
+    <svg class="heart" viewBox="0 0 512 512">
+      <path
+        d="M256 464s-16-14.4-32-28.8C128 352 64 288 64 208
+           64 144 112 96 176 96
+           c40 0 64 24 80 48
+           16-24 40-48 80-48
+           64 0 112 48 112 112
+           0 80-64 144-160 227.2
+           C272 449.6 256 464 256 464z"
+        fill="#ffd6e0"
+      />
+      <text x="50%" y="58%" text-anchor="middle">SOBE</text>
+    </svg>
+
+    <div class="subtitle">always & forever</div>
+
+    <a href="index.html" class="back">Go Back</a>
+
+  </div>
+
+</body>
+</html>
